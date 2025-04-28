@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaqsiyeed - [Magacaaga]</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    header img {
+      width: 100px;  /* Xajmiga logo-ga */
+      height: auto;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 3em;
+    }
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .skills div {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .skills div:hover {
+      transform: scale(1.1);
+    }
+    .skills img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      display: none;
+    }
+    .cookie-consent button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .cookie-consent button:hover {
+      background-color: #218838;
+    }
+    /* Xayaysiis Style */
+    .advertisement {
+      background-color: #ff9800;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 18px;
+      margin: 20px 0;
+      animation: slideIn 3s ease-out forwards;
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Logo -->
+    <img src="logo.png" alt="Logo" />  <!-- Halkan ku beddel 'logo.png' magaca iyo dariiqa sawirkaaga logo -->
+    <h1>Magacaaga - Xirfadaha</h1>
+  </header>
+
+  <!-- Xayaysiis AdSense -->
+  <div class="advertisement">
+    <!-- Ku dar koodhka AdSense-kaaga halkan -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXX" <!-- Ku beddel "ca-pub-XXXXXX" koodhkaaga -->
+         data-ad-slot="XXXXXX"       <!-- Ku beddel "XXXXXX" slot ID-gaaga -->
+         data-ad-format="auto"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <section class="skills">
+    <div>
+      <img src="barnaamij1.jpg" alt="Barnaamij 1">
+      <h3>Barnaamij 1</h3>
+      <p>Sharaxaad kooban oo ku saabsan barnaamijka.</p>
+    </div>
+    <div>
+      <img src="barnaamij2.jpg" alt="Barnaamij 2">
+      <h3>Barnaamij 2</h3>
+      <p>Sharaxaad kooban oo ku saabsan barnaamijka.</p>
+    </div>
+    <div>
+      <img src="barnaamij3.jpg" alt="Barnaamij 3">
+      <h3>Barnaamij 3</h3>
+      <p>Sharaxaad kooban oo ku saabsan barnaamijka.</p>
+    </div>
+  </section>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent" id="cookieConsent">
+    <p>Websaydhka wuxuu isticmaalaa cookies si uu u hagaajiyo khibradaada. Haddii aad oggolaatay, riix badhanka hoose.</p>
+    <button onclick="acceptCookies()">Oggolow Cookies</button>
+  </div>
+
+  <script>
+    // Function to accept cookies and hide consent banner
+    function acceptCookies() {
+      document.getElementById('cookieConsent').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    }
+
+    // Check if cookies have been accepted before
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookieConsent').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
